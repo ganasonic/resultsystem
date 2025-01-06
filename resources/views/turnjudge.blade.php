@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-6">
                     <h5>Carving</h5>
-                    <input type="range" class="form-range" min="0" max="8" step="0.1" id="curvingpoint" style="width: 100%;" v-model.number="carving_point" v-on:change="onCarving">
+                    <input type="range" class="form-range" min="0" max="10" step="0.1" id="curvingpoint" style="width: 100%;" v-model.number="carving_point" v-on:change="onCarving">
                 </div>
                 <div class="col-3">
                     <span class="level-font">@{{ loadLevelStringC(carving_point) }}</span>
@@ -58,7 +58,7 @@
             <div class="row">
                 <div class="col-6">
                     <h5>Abs/Ext</h5>
-                    <input type="range" class="form-range" min="0" max="6" step="0.1" id="absextpoint" style="width: 100%;" v-model.number="absext_point" v-on:change="onAbsext">
+                    <input type="range" class="form-range" min="0" max="5" step="0.1" id="absextpoint" style="width: 100%;" v-model.number="absext_point" v-on:change="onAbsext">
                 </div>
                 <div class="col-3">
                     <span class="level-font">@{{ loadLevelStringAEU(absext_point) }}</span>
@@ -76,7 +76,7 @@
             <div class="row">
                 <div class="col-6">
                     <h5>Upper Body</h5>
-                    <input type="range" class="form-range" min="0" max="6" step="0.1" id="upperpoint" style="width: 100%;" v-model.number="upper_point" v-on:change="onUpper">
+                    <input type="range" class="form-range" min="0" max="5" step="0.1" id="upperpoint" style="width: 100%;" v-model.number="upper_point" v-on:change="onUpper">
                 </div>
                 <div class="col-3">
                     <span class="level-font">@{{ loadLevelStringAEU(upper_point) }}</span>

@@ -397,6 +397,13 @@ var app = new Vue(
                 this.isGrab2 = true
             }
         },
+        onSelectJP: function(airno, point){
+            if(airno==1){
+                this.air_point1 = point;
+            }else{
+                this.air_point2 = point;
+            }
+        },
 
         //エアポイントレベル文字
         loadLevelString1: function(air_point1) {

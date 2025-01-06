@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container" id="processrace">
-  <h2>レース進行画面</h2>
+  <h2>レース進行画面</h2><h4>初回は対象選手を選択してください。</h4>
 
   <!-- ヘッダ -->
   <!--

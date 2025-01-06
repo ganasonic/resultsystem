@@ -4,9 +4,9 @@ var app = new Vue(
     el: '#turn',
     data: {
       message: '',
-      carving_point: 8.0,
-      absext_point: 6.0,
-      upper_point: 6.0,
+      carving_point: 10.0,
+      absext_point: 5.0,
+      upper_point: 5.0,
       base_point: 20.0,
       deduction: 0.0,
       turn_point: 20.0,
@@ -62,12 +62,14 @@ var app = new Vue(
       loadLevelStringTurnBase: function(in_point) {
         retvalue = "";
         this.in_point = in_point;
-        if(this.in_point>=0 && this.in_point<4.1){
+        if(this.in_point==0){
+            retvalue = "Not Ski"
+        }else if(this.in_point>0 && this.in_point<4.1){
             retvalue = "Poor"
         }else if(this.in_point>=4.1 && this.in_point<8.1){
-            retvalue = "Below Average"
+            retvalue = "Managing"
         }else if(this.in_point>=8.1 && this.in_point<12.1){
-            retvalue = "Average"
+            retvalue = "Adequate"
         }else if(this.in_point>=12.1 && this.in_point<16.1){
             retvalue = "Good"
         }else if(this.in_point>=16.1){
@@ -80,15 +82,17 @@ var app = new Vue(
       loadLevelStringC: function(in_point) {
         retvalue = "";
         this.in_point = in_point;
-        if(this.in_point>=0 && this.in_point<1.7){
-            retvalue = "Poor"
-        }else if(this.in_point>=1.7 && this.in_point<3.3){
-            retvalue = "Below Average"
-        }else if(this.in_point>=3.3 && this.in_point<4.9){
-            retvalue = "Average"
-        }else if(this.in_point>=4.9 && this.in_point<6.5){
+        if(this.in_point==0){
+            retvalue = "Not Ski"
+        }else if(this.in_point>0 && this.in_point<2.1){
+          retvalue = "Poor"
+        }else if(this.in_point>=2.1 && this.in_point<4.1){
+          retvalue = "Managing"
+        }else if(this.in_point>=4.1 && this.in_point<6.1){
+            retvalue = "Adequate"
+        }else if(this.in_point>=6.1 && this.in_point<8.1){
             retvalue = "Good"
-        }else if(this.in_point>=6.5){
+        }else if(this.in_point>=8.1){
             retvalue = "Excellent"
         }
         return retvalue;
@@ -98,15 +102,17 @@ var app = new Vue(
       loadLevelStringAEU: function(in_point) {
         retvalue = "";
         this.in_point = in_point;
-        if(this.in_point>=0 && this.in_point<1.3){
+        if(this.in_point==0){
+          retvalue = "Not Ski"
+        }else if(this.in_point>0 && this.in_point<1.1){
             retvalue = "Poor"
-        }else if(this.in_point>=1.3 && this.in_point<2.5){
-            retvalue = "Below Average"
-        }else if(this.in_point>=2.5 && this.in_point<3.7){
-            retvalue = "Average"
-        }else if(this.in_point>=3.7 && this.in_point<4.9){
+        }else if(this.in_point>=1.1 && this.in_point<2.1){
+            retvalue = "Managing"
+        }else if(this.in_point>=2.1 && this.in_point<3.1){
+            retvalue = "Adequate"
+        }else if(this.in_point>=3.1 && this.in_point<4.1){
             retvalue = "Good"
-        }else if(this.in_point>=4.9){
+        }else if(this.in_point>=4.1){
             retvalue = "Excellent"
         }
         return retvalue;

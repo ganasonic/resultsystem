@@ -228,15 +228,15 @@
 
     <!-- レンジ -->
     <div class="row">
-        <div class="col-6">
+        <div class="col-5">
             <input type="range" class="form-range" min="0" v-bind:max="current_max1" step="0.1" id="airpoint1" style="width: 100%;" v-model.number="air_point1" v-on:change="onAirPoint1">
         </div>
-<!--        
-        <div class="col-2">
+       
+        <div class="col-1">
             <label class="form-label"></label>
         </div>
--->
-        <div class="col-6">
+
+        <div class="col-5">
             <input type="range" class="form-range" min="0" v-bind:max="current_max2" step="0.1" id="airpoint1" style="width: 100%;" v-model.number="air_point2" v-on:change="onAirPoint2">
         </div>
     </div>
@@ -247,6 +247,34 @@
             <label class="form-label"></label>
         </div>
     </div>
+    <!-- レンジダイレクトボタン -->
+    <div class="row">
+        <div class="col-1">
+            <label class="form-label">Direct</label>
+        </div>
+        <div class="col-5">
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <button type="button" class="btn btn-outline-primary btn-lg btn-group-font" v-on:click="onSelectJP(1,1)">1.0</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-group-font" v-on:click="onSelectJP(1,3)">3.0</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-group-font" v-on:click="onSelectJP(1,5)">5.0</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-group-font" v-on:click="onSelectJP(1,7)">7.0</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-group-font" v-on:click="onSelectJP(1,9)">9.0</button>
+            </div>
+        </div>
+        <div class="col-1">
+            <label class="form-label">Direct</label>
+        </div>
+        <div class="col-5">
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <button type="button" class="btn btn-outline-primary btn-lg btn-group-font" v-on:click="onSelectJP(2,1)">1.0</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-group-font" v-on:click="onSelectJP(2,3)">3.0</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-group-font" v-on:click="onSelectJP(2,5)">5.0</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-group-font" v-on:click="onSelectJP(2,7)">7.0</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-group-font" v-on:click="onSelectJP(2,9)">9.0</button>
+            </div>
+        </div>
+    </div>
+
 
     <!-- メッセージ -->
     <div class="position-absolute bottom-0 start-0 bg-warning">
